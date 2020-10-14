@@ -14,7 +14,10 @@
       const divs = document.QuerySelector('divs');
       
       input.addEventListener('click', function(e) {
-        (this.divs).delete();
+        for (let i = 0; i < divs.length; i++) {
+          divs[i].addEventListener('click', bubble);
+          divs[i].delete();
+        }
       })
     </script>
     
