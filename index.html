@@ -45,9 +45,10 @@ const divs = document.querySelectorAll('div');
  
 function bubble(e) {
   console.log(this.firstChild.nodeValue);
-  e.stopPropagation();
-  this.firstChildNode.nodeValue = "hello this is new text";
-  }
+  this.firstChildNode.nodeValue = "hello this is new text"
+  ;e.stopPropagation();  
+  
+}
 
  
 for (let i = 0; i < divs.length; i++) {
