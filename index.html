@@ -41,19 +41,19 @@
     </div>
     
     <script type="text/javascript">
-const divs = document.querySelectorAll('div');
+      const divs = document.querySelectorAll('div');
  
-function bubble(e) {
-  console.log(this.firstChild.nodeValue);
-  this.firstChild.nodeValue = "hello this is new text";
-  e.stopPropagation();
-}
+      function replaceText(e) {
+      console.log(this.firstChild.nodeValue);
+        this.firstChild.nodeValue = "hello this is new text";
+        e.stopPropagation();
+        }
 
  
-for (let i = 0; i < divs.length; i++) {
-  divs[i].addEventListener('click', bubble);
-}
-</script>
+      for (let i = 0; i < divs.length; i++) {
+        divs[i].addEventListener('click', replaceText);
+        }
+    </script>
   </body>
   
 </html>
