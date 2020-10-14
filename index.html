@@ -11,18 +11,16 @@
     </style>
     
     <script>
-      let divs = document.querySelectorAll('div');
-      
-      function makeBlue(e) {
-          console.log(this.firstChild.nodeValue.trim());
-          this.firstChild.nodeValue.innerHTML{border: 2px solid blue;
-          }
-      }
-      
-      for(let i = 0; i < divs.length; i++) {
-        divs[i].addEventListener('click', makeBlue);
-      }
-      
+      divs = document.querySelectorAll('div');
+ 
+function capture(e) {
+  console.log(this.firstChild.nodeValue.trim() + ' captured');
+}
+ 
+for (let i = 0; i < divs.length; i++) {
+  // set the third argument to `true`!
+  divs[i].addEventListener('click', capture, true);
+}
     </script>
     
     
