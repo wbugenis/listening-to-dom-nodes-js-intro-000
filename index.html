@@ -44,6 +44,7 @@
 const divs = document.querySelectorAll('div');
  
 function bubble(e) {
+  console.log(this.firstChild.nodeValue.innerHTML);
   this.firstChild.nodeValue.innerHTML= "hello this is new text";
   }
 
